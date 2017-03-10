@@ -35,7 +35,7 @@ module Fog
           error_message = 'DigitalOcean V1 is deprecated.Please use `:version => :v2` attribute to use Next Gen Cloud Servers.'
           raise error_message
         else
-          require 'fog/digitalocean/compute'
+          require 'fog/digitalocean/compute_v2'
           Fog::Compute::DigitalOcean.new(attributes)
         end
       when :stormondemand
